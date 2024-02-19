@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './App.css'
+import './appStyle.css'
 import {puppyList} from './data.js'
 
 function App() {
@@ -17,7 +18,7 @@ console.log(featuredPup)
           return <p onClick={() => {setFeatpupId(puppy.id)}} key={puppy.id}>{puppy.name}</p>;
         })}
        {featPupId && 
-        <div>
+        <div className='pupCard'>
           <h2>{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
